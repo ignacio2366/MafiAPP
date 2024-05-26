@@ -172,6 +172,9 @@ export const layouts = {
     h80_px: {
         height: 80,
     },
+    h100_px: {
+        height: 100,
+    },
     h80: {
         height: '80%',
     },

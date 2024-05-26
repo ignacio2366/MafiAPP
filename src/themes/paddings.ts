@@ -18,6 +18,10 @@ export const padding = {
     },
     paddingHorizontal_15: {
         paddingHorizontal: "15%",
+    },
+    paddingTop_50px:{
+        paddingTop: 50,
+        paddingBottom: 10,
     }
 } as const satisfies Record<string, ViewStyle>;
 
