@@ -114,6 +114,18 @@ export const layouts = {
     w90_px: {
         width: 90,
     },
+    w48_px: {
+        width: 48,
+    },
+    w98_px: {
+        width: 98,
+    },
+    w120_px: {
+        width: 120,
+    },
+    w150_px: {
+        width: 150,
+    },
     w30: {
         width: '30%',
     },
@@ -156,6 +168,9 @@ export const layouts = {
     },
     h60_px: {
         height: 60,
+    },
+    h80_px: {
+        height: 80,
     },
     h80: {
         height: '80%',

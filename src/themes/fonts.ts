@@ -1,4 +1,4 @@
-import { TextStyle } from "react-native";
+import { PixelRatio, TextStyle } from "react-native";
 
 // export const generateFontSizes = () => {
 //     return config.fonts.sizes.reduce((acc, size) => {
@@ -9,6 +9,8 @@ import { TextStyle } from "react-native";
 //         });
 //     }, {} as FontSizes);
 // };
+
+const pixel = PixelRatio.getFontScale();
 export const fonts = {
     bold: {
         fontWeight: 'bold',
@@ -41,11 +43,16 @@ export const fonts = {
 } as const satisfies Record<string, TextStyle>;
 
 export const size = {
-    font_size_2: { fontSize: 2 },
-    font_size_8: { fontSize: 8 },
-    font_size_12: { fontSize: 12 },
-    font_size_16: { fontSize: 16 },
-    font_size_20: { fontSize: 20 },
-    font_size_24: { fontSize: 24 },
-    // ... add more sizes as needed
+    font_size_2: { fontSize: 2 / pixel },
+    font_size_8: { fontSize: 8 / pixel },
+    font_size_12: { fontSize: 12 / pixel },
+    font_size_16: { fontSize: 16 / pixel },
+    font_size_20: { fontSize: 20 / pixel },
+    font_size_24: { fontSize: 24 / pixel },
+    font_size_32: { fontSize: 32 / pixel },
+
+} as const satisfies Record<string, TextStyle>;
+
+export const textalign = {
+    textRight: { textAlign: 'right' }
 } as const satisfies Record<string, TextStyle>;

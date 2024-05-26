@@ -10,10 +10,12 @@ export const backgrounds = {
     },
     orange: {
         backgroundColor: "#FF9447",
-    }
-    ,
+    },
     black: {
         backgroundColor: "#000000",
+    },
+    gray: {
+        backgroundColor: "#667582",
     }
 
 }

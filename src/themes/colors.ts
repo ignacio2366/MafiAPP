@@ -18,3 +18,11 @@ export const colors = {
 
 
 }
+
+export const staticColor = {
+    cherry: "#FF465F",
+    white: "#FFFFFF",
+    dark: "#00040D",
+    orange: "#FF9447",
+    black: "#000000",
+}
