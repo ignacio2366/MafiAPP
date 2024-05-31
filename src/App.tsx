@@ -17,6 +17,7 @@ import {
   View,
 } from 'react-native';
 
+<<<<<<< Updated upstream
 import {
   Colors,
   DebugInstructions,
@@ -31,6 +32,15 @@ type SectionProps = PropsWithChildren<{
 
 function Section({children, title}: SectionProps): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
+=======
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { Provider } from 'react-redux';
+import { Navigations } from './navigations/Navigation';
+import { store } from '../store';
+
+const queryClient = new QueryClient();
+function App(): React.JSX.Element {
+>>>>>>> Stashed changes
   return (
     <View style={styles.sectionContainer}>
       <Text
@@ -55,6 +65,7 @@ function Section({children, title}: SectionProps): React.JSX.Element {
   );
 }
 
+<<<<<<< Updated upstream
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
 
@@ -115,4 +126,6 @@ const styles = StyleSheet.create({
   },
 });
 
+=======
+>>>>>>> Stashed changes
 export default App;

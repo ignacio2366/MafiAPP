@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 module.exports = {
 	env: {
 		'jest/globals': true,
@@ -110,4 +111,28 @@ module.exports = {
 			},
 		],
 	},
+=======
+const { rules } = require("eslint-config-prettier");
+
+module.exports = {
+  parser: "@typescript-eslint/parser",
+  plugins: ["@typescript-eslint", "prettier"],
+  overrides: [
+    {
+      files: ["*.ts", "*.tsx"],
+      extends: [
+        "airbnb-base",
+        "airbnb-typescript/base",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+      ],
+      parserOptions: {
+        parser: "@typescript-eslint/parser",
+        project: "tsconfig.json",
+        sourceType: "module",
+      },
+      rules: {}
+    },
+  ],
+>>>>>>> Stashed changes
 };
