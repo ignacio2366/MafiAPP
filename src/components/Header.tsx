@@ -1,19 +1,21 @@
-import { Text, View } from "react-native"
-import { backgrounds, colors, fonts, layouts, margin, padding, size, textalign } from "../themes"
-import { TouchableOpacity } from "react-native-gesture-handler"
-import IcOrangeBox from "../themes/assets/svg/ic-orangebox.svg"
-export const Header = () => {
-    return (
+import { Text, View } from 'react-native';
+import { TouchableOpacity } from 'react-native-gesture-handler';
+import {
+  backgrounds, colors, fonts, layouts, margin, padding, size, textalign,
+} from '../themes';
+import IcOrangeBox from '../themes/assets/svg/ic-orangebox.svg';
+
+const Header = () => (
         <View
             style={
                 [
 
-                    layouts.row,
-                    backgrounds.dark,
-                    layouts.justifyBetween,
-                    layouts.itemsCenter,
-                    padding.paddingHorizontal_15px,
-                    padding.paddingTop_50px,
+                  layouts.row,
+                  backgrounds.dark,
+                  layouts.justifyBetween,
+                  layouts.itemsCenter,
+                  padding.paddingHorizontal_15px,
+                  padding.paddingTop_50px,
 
                 ]
             }
@@ -24,10 +26,10 @@ export const Header = () => {
             <Text
                 style={
                     [colors.white,
-                    layouts.itemsEnd,
-                    fonts.fontRegular,
-                    size.font_size_12,
-                    textalign.textRight
+                      layouts.itemsEnd,
+                      fonts.fontRegular,
+                      size.font_size_12,
+                      textalign.textRight,
                     ]
                 }
             >
@@ -36,15 +38,15 @@ export const Header = () => {
             <Text
                 style={
                     [colors.white,
-                    layouts.w48_px,
-                    layouts.itemsStart,
-                    fonts.fontBlack,
-                    size.font_size_12,
+                      layouts.w48_px,
+                      layouts.itemsStart,
+                      fonts.fontBlack,
+                      size.font_size_12,
                     ]
                 }
             >
                 Mark Angelo Ignacio Mobile
             </Text>
         </View>
-    )
-}
+);
+export default Header;
