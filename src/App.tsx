@@ -7,16 +7,14 @@
 
 import React from 'react';
 
-import { Navigations } from './navigations/Navigation';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { Provider } from 'react-redux';
-import { store } from '../store';
 
+import { Navigations } from './navigations/Navigation';
+import { store } from '../store';
 
 const queryClient = new QueryClient();
 function App(): React.JSX.Element {
-
-
   return (
     <Provider store={store}>
       <QueryClientProvider client={queryClient}>
@@ -25,6 +23,5 @@ function App(): React.JSX.Element {
     </Provider>
   );
 }
-
 
 export default App;

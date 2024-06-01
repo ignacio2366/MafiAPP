@@ -1,2 +1,3 @@
-export * from "./Auth/LoginScreen";
-export * from "./HomeScreen";
+export * from './HomeScreen';
+
+export * from './Auth/LoginScreen';

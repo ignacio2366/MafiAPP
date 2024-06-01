@@ -1,26 +1,29 @@
-import { ScrollView, Text, TextInput, TouchableOpacity, View } from 'react-native';
-import { layouts, backgrounds, margin, border, style, fonts, size, colors, padding } from '../../themes';
-import { Button, Header, TextInputLabel } from '../../components';
-import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '../../../store';
 import { useCallback } from 'react';
-import { setUser, UserT } from '../../redux/user.slice';
-import { StackNavigation } from '../../types';
+import {
+  Text, TextInput, View,
+} from 'react-native';
 
+import { useDispatch, useSelector } from 'react-redux';
+
+import { RootState } from '../../../store';
+import { Button, Header } from '../../components';
+import {
+  layouts, backgrounds, margin, style, fonts, size, colors, padding,
+} from '../../themes';
+import { StackNavigation } from '../../types';
 
 interface Props {
   navigation: StackNavigation;
 }
 export function LoginScreen({ navigation }: Props) {
-  const { fullname } = useSelector((state: RootState) => state.user.user)
-  const dispatch = useDispatch()
-
+  const { fullname } = useSelector((state: RootState) => state.user.user);
+  const dispatch = useDispatch();
 
   const onSubmit = useCallback(() => {
-    navigation.navigate("Home");
+    navigation.navigate('Home');
     // const payload: UserT = { user_id: 1, fullname: "sad", email: "SAD", user_type: "" }
     // dispatch(setUser(payload))
-  }, [])
+  }, []);
   return (
     <>
       <Header />
@@ -76,7 +79,7 @@ export function LoginScreen({ navigation }: Props) {
             >password</Text>
             <TextInput style={[style.input, fonts.fontRegular, size.font_size_16]} placeholder='' secureTextEntry />
           </View>
-          <Button label={"Login"} onPress={onSubmit} />
+          <Button label={'Login'} onPress={onSubmit} />
         </View>
       </View>
     </>

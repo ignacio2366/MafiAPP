@@ -1,11 +1,14 @@
 import { Text, View } from 'react-native';
-import { TouchableOpacity } from 'react-native-gesture-handler';
-import {
-  backgrounds, colors, fonts, layouts, margin, padding, size, textalign,
-} from '../themes';
-import IcOrangeBox from '../themes/assets/svg/ic-orangebox.svg';
 
-const Header = () => (
+import { TouchableOpacity } from 'react-native-gesture-handler';
+
+import {
+  backgrounds, colors, fonts, layouts, padding, size, textalign,
+} from '../themes/index';
+
+import IcOrangeBox from '@/themes/assets/svg/orangebox.svg';
+
+export const Header = () => (
         <View
             style={
                 [
@@ -49,4 +52,3 @@ const Header = () => (
             </Text>
         </View>
 );
-export default Header;
